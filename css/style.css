@@ -1,67 +1,178 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
 }
 
+/* Header */
 header {
     background-color: #000;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img {
+    height: 70px;
+    margin-left: 10px;
+}
+
+nav {
+    flex: 1;
     text-align: center;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-header nav ul li {
-    display: inline;
+nav ul li {
     margin: 0 15px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-cart input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px; /* Ajusta el tamaño si es necesario */
+}
+
+.search-button, .cart-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.search-button:hover, .cart-button:hover {
+    color: #ff6f61;
+}
+
+/* Hero Section */
 .hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 60px 0;
+    padding: 100px 0;
+    position: relative;
+    animation: slide-down 1s ease;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 .hero h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0;
+    letter-spacing: 2px;
 }
 
 .hero p {
     font-size: 1.2em;
+    margin-top: 10px;
 }
 
+.explore-button {
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #e55b50;
+}
+
+/* Product Grid */
 .product-grid {
-    padding: 20px 0;
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+.product-grid h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .product {
-    background-color: rgb(151, 148, 148);
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 20px 10px;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
 }
 
 .product img {
-    width: 20%;
+    width: 100%;
     height: auto;
-    display: block;
 }
 
 .product-info {
@@ -76,6 +187,7 @@ header nav ul li a {
 .product-info p {
     margin: 5px 0;
     font-size: 1.2em;
+    color: #ff6f61;
 }
 
 button {
@@ -86,25 +198,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #e55b50;
 }
 
-footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
+/* Cart Section */
 #cart {
     background-color: #fff;
     padding: 20px;
@@ -119,4 +220,33 @@ footer {
 
 #cart-items li {
     padding: 5px 0;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Keyframes */
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

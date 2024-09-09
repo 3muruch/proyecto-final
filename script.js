@@ -13,7 +13,7 @@ function updateCart() {
 
     cart.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = `${item.name} - $${item.price.toFixed(3)}`;
+        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
         cartItems.appendChild(li);
     });
 
