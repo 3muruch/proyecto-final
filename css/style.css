@@ -12,7 +12,6 @@ header {
     background-color: #000;
     color: white;
     padding: 10px 0;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
@@ -27,14 +26,21 @@ header {
     width: 100%;
 }
 
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
 .logo img {
-    height: 70px;
-    margin-left: 10px;
+    height: 60px;
+    margin-left: 180px; 
 }
 
 nav {
-    flex: 1;
-    text-align: center;
+    flex: 2;
+    display: flex;
+    justify-content: center; /* Los enlaces de navegación están centrados */
 }
 
 nav ul {
@@ -46,7 +52,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -61,7 +67,9 @@ nav ul li a:hover {
 }
 
 .search-cart {
+    flex: 1;
     display: flex;
+    justify-content: flex-end; /* El buscador y el carrito están a la derecha */
     align-items: center;
 }
 
@@ -70,7 +78,7 @@ nav ul li a:hover {
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 200px; /* Ajusta el tamaño si es necesario */
+    width: 200px;
 }
 
 .search-button, .cart-button {
@@ -125,128 +133,128 @@ nav ul li a:hover {
     color: white;
     padding: 15px 30px;
     border-radius: 5px;
+    font-size: 1.1em;
     cursor: pointer;
-    font-size: 1.2em;
     margin-top: 20px;
     transition: background-color 0.3s ease;
 }
 
 .explore-button:hover {
-    background-color: #e55b50;
+    background-color: #e65b4e;
 }
 
 /* Product Grid */
 .product-grid {
-    padding: 40px 0;
-    background-color: #ffffff;
+    padding: 50px 0;
 }
 
 .product-grid h2 {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 40px;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .product {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin: 20px 10px;
-    max-width: 250px;
+    padding: 20px;
     transition: transform 0.3s ease;
 }
 
 .product:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
 }
 
 .product img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-}
-
-.product-info {
-    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
 }
 
 .product-info h3 {
-    margin: 10px 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin: 15px 0;
 }
 
 .product-info p {
-    margin: 5px 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #ff6f61;
 }
 
-button {
+.product button {
     background-color: #ff6f61;
     border: none;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 1em;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #e55b50;
-}
-
-/* Cart Section */
-#cart {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-#cart-items {
-    list-style: none;
-    padding: 0;
-}
-
-#cart-items li {
-    padding: 5px 0;
-    font-size: 1.1em;
+.product button:hover {
+    background-color: #e65b4e;
 }
 
 /* Footer */
 footer {
     background-color: #000;
     color: white;
-    text-align: center;
     padding: 20px 0;
+    text-align: center;
+}
+
+.footer-socials {
+    margin-bottom: 15px;
+}
+
+.footer-socials a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #ff6f61;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Cart Section */
+#cart {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#cart h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+#cart ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#total {
+    font-size: 1.5em;
+    font-weight: bold;
     margin-top: 20px;
-}
-
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-/* Keyframes */
-@keyframes slide-down {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
