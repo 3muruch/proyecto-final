@@ -81,7 +81,7 @@ nav ul li a:hover {
     width: 200px;
 }
 
-.search-button, .cart-button {
+.search-button, .cart-button , .user-button {
     background-color: transparent;
     border: none;
     color: white;
@@ -91,7 +91,7 @@ nav ul li a:hover {
     transition: color 0.3s ease;
 }
 
-.search-button:hover, .cart-button:hover {
+.search-button:hover, .cart-button:hover,.user-button:hover {
     color: #ff6f61;
 }
 

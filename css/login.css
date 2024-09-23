@@ -1,0 +1,105 @@
+/* General Styles for the Page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Login Section */
+.login {
+    padding: 50px 0;
+    text-align: center;
+    flex: 1; /* Permite que este contenedor se expanda para ocupar el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+
+.login h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.login .form-group {
+    margin-bottom: 15px;
+}
+
+.login label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login input[type="email"],
+.login input[type="password"],
+.login input[type="text"] {
+    width: 400px; /* Ajusta el ancho de los campos de entrada */
+    padding: 10px;
+    border: 1px solid #d6d1d1;
+    border-radius: 5px;
+    margin: 0 auto; /* Centra el campo horizontalmente */
+}
+
+.login button {
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+    background-color: #e65b4e;
+}
+
+.login p {
+    margin-top: 20px;
+}
+
+.login a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-socials {
+    margin-bottom: 15px;
+}
+
+.footer-socials a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #ff6f61;
+}
+
+footer p {
+    margin: 0;
+}
