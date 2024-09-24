@@ -36,14 +36,14 @@
 
     <main class="login">
         <h2>Iniciar Sesión</h2>
-        <form action="login.php" method="post">
+        <form action="login_usuario.php" method="POST">
             <div class="form-group">
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="contraseña" required>
             </div>
             <button type="submit">Iniciar Sesión</button>
         </form>
