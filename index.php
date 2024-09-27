@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,12 +12,13 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
+                <a href="index.php">
                     <img src="./img/logo.png" alt="Logo de Tienda m77">
                 </div>
                 
                 <nav>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
+                        <li><a href="index.php">Inicio</a></li>
                         <li><a href="#">Productos</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
@@ -45,6 +46,8 @@
         <section class="product-grid">
             <div class="container">
                 <h2>Nuevos Productos</h2>
+
+                <!-- Primera fila de productos -->
                 <div class="row">
                     <div class="product">
                         <img src="./img/remera4.jpeg" alt="Remera Oversize Beige">
@@ -79,6 +82,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Segunda fila de productos (Joggers) -->
                 <div class="row">
                     <div class="product">
                         <img src="./img/pantalon1.webp" alt="Joggers Black">
@@ -113,6 +118,78 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Fila de productos (Shorts) -->
+                <div class="row">
+                    <div class="product">
+                        <img src="./img/short1.webp" alt="Short Deportivo Black">
+                        <div class="product-info">
+                            <h3>Short Deportivo Black</h3>
+                            <p>$30.00</p>
+                            <button onclick="addToCart('Short Deportivo Black', 30.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/short2.webp" alt="Short Deportivo Gris">
+                        <div class="product-info">
+                            <h3>Short Deportivo Gris</h3>
+                            <p>$35.00</p>
+                            <button onclick="addToCart('Short Deportivo Gris', 35.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/short3.webp" alt="Short Deportivo Beige">
+                        <div class="product-info">
+                            <h3>Short Deportivo Beige</h3>
+                            <p>$40.00</p>
+                            <button onclick="addToCart('Short Deportivo Beige', 40.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/short4.webp" alt="Short Deportivo Azul">
+                        <div class="product-info">
+                            <h3>Short Deportivo Azul</h3>
+                            <p>$45.00</p>
+                            <button onclick="addToCart('Short Deportivo Azul', 45.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nueva fila de productos (Buzos) -->
+                <div class="row">
+                    <div class="product">
+                        <img src="./img/buzo1.webp" alt="Buzo Hoodie Black">
+                        <div class="product-info">
+                            <h3>Buzo Hoodie Black</h3>
+                            <p>$60.00</p>
+                            <button onclick="addToCart('Buzo Hoodie Black', 60.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/buzo2.webp" alt="Buzo Hoodie Beige">
+                        <div class="product-info">
+                            <h3>Buzo Hoodie Beige</h3>
+                            <p>$65.00</p>
+                            <button onclick="addToCart('Buzo Hoodie Beige', 65.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/buzo3.webp" alt="Buzo Crewneck Gris">
+                        <div class="product-info">
+                            <h3>Buzo Crewneck Gris</h3>
+                            <p>$70.00</p>
+                            <button onclick="addToCart('Buzo Crewneck Gris', 70.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/buzo4.webp" alt="Buzo Crewneck Azul">
+                        <div class="product-info">
+                            <h3>Buzo Crewneck Azul</h3>
+                            <p>$75.00</p>
+                            <button onclick="addToCart('Buzo Crewneck Azul', 75.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -139,4 +216,4 @@
     <script src="script.js"></script>
 
 </body>
-</html>
+</html>  
