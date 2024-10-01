@@ -13,12 +13,13 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
+                <a href="index.php">
                     <img src="./img/logo.png" alt="Logo de Tienda m77">
                 </div>
                 
                 <nav>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
+                        <li><a href="index.php">Inicio</a></li>
                         <li><a href="#">Productos</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
