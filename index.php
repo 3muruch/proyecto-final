@@ -19,8 +19,17 @@
                 <nav>
                     <ul>
                         <li><a href="index.php">Inicio</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li>
+            <a href="#">Productos</a>
+            <div class="dropdown">
+                
+                <div class="product">Remera</div>
+                <div class="product">Joggers</div>
+                <div class="product">Short</div>
+                <div class="product">Buzo</div>
+            </div>
+        </li>
+                       <li><a href="#" id="contact-link">Contacto</a></li>
                     </ul>
                 </nav>
                 
@@ -213,6 +222,31 @@
             <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Sección del formulario de contacto (oculta por defecto) -->
+<div id="contact-form" class="contact-form" style="display: none;">
+    <div class="form-container">
+        <h3>Contacto</h3>
+        <form id="form-contact" action="#" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Teléfono (opcional):</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ej: 1234567890">
+                
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+            <button type="button" onclick="closeContactForm()">Cerrar</button>
+        </form>
+    </div>
+</div>
+
     <script src="script.js"></script>
 
 </body>

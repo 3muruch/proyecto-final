@@ -19,3 +19,12 @@ function renderCart() {
 
     document.getElementById('total').textContent = `Total: $${total.toFixed(2)}`;
 }
+document.getElementById('contact-link').onclick = function(event) {
+    event.preventDefault(); // Evita que se recargue la página
+    document.getElementById('contact-form').style.display = 'flex';
+};
+
+// Función para cerrar el formulario de contacto
+function closeContactForm() {
+    document.getElementById('contact-form').style.display = 'none';
+}
