@@ -28,3 +28,14 @@ document.getElementById('contact-link').onclick = function(event) {
 function closeContactForm() {
     document.getElementById('contact-form').style.display = 'none';
 }
+function showSuccessMessage(event) {
+    event.preventDefault();  // Prevenir el envío del formulario
+    
+    // Crear y mostrar el mensaje de éxito
+    alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+    
+    // Opcionalmente puedes vaciar los campos del formulario
+    document.getElementById('form-contact').reset();
+
+    return false;  // Prevenir el comportamiento por defecto
+}

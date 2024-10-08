@@ -214,9 +214,9 @@
     <footer>
         <div class="container">
             <div class="footer-socials">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/milton_0510/?next=%2F"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@milton1482"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@m7ruch1?lang=es"><i class="fab fa-tiktok"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
             <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
@@ -227,23 +227,24 @@
 <div id="contact-form" class="contact-form" style="display: none;">
     <div class="form-container">
         <h3>Contacto</h3>
-        <form id="form-contact" action="#" method="post">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">Teléfono (opcional):</label>
-                <input type="tel" id="phone" name="phone" placeholder="Ej: 1234567890">
-                
+        <form id="form-contact" action="#" method="post" onsubmit="return showSuccessMessage(event)">
+    <!-- Los campos del formulario -->
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone">Teléfono (opcional):</label>
+    <input type="tel" id="phone" name="phone" placeholder="Ej: 1234567890">
+    
+    <label for="message">Mensaje:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+    
+    <button type="submit">Enviar</button>
+    <button type="button" onclick="closeContactForm()">Cerrar</button>
+</form>
 
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            
-            <button type="submit">Enviar</button>
-            <button type="button" onclick="closeContactForm()">Cerrar</button>
-        </form>
     </div>
 </div>
 

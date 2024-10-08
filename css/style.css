@@ -307,6 +307,7 @@ footer p {
     margin-top: 20px;
 }
 
+/* Estilo para el fondo oscuro */
 .contact-form {
     position: fixed;
     top: 0;
@@ -318,19 +319,26 @@ footer p {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadido efecto */
 }
 
 .form-container {
     background-color: white;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    width: 300px; /* Ancho del cuadro */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Mantener el sombreado */
+    width: 50%; /* Aumentar el tamaño */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir animación */
     text-align: center;
 }
 
+.form-container:hover {
+    transform: scale(1.05); /* Efecto interactivo al hacer hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Más sombra al hacer hover */
+}
+
 .form-container h3 {
-    margin: 0 0 15px;
+    margin-bottom: 20px;
 }
 
 .form-container label {
@@ -338,24 +346,34 @@ footer p {
     margin: 10px 0 5px;
 }
 
-.form-container input, .form-container textarea {
+.form-container input,
+.form-container textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #000000;
+    outline: none;
 }
 
 .form-container button {
     background-color: #ff6f61;
     color: white;
-    padding: 10px 15px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .form-container button:hover {
     background-color: #e65b4e;
+    transform: translateY(-3px); /* Pequeño efecto de elevación */
 }
