@@ -34,8 +34,9 @@
                 </nav>
                 
                 <div class="search-cart">
-                    <input type="text" placeholder="Buscar...">
-                    <button class="search-button"><i class="fas fa-search"></i></button>
+                <input type="text" id="search-input" placeholder="Buscar...">
+<button class="search-button" onclick="searchProducts()"><i class="fas fa-search"></i></button>
+
                     <button class="user-button" onclick="window.location.href='login.php';"><i class="fas fa-user"></i></button>
                     <button class="cart-button"><i class="fas fa-shopping-cart"></i></button>
                 </div>

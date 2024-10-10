@@ -39,3 +39,25 @@ function showSuccessMessage(event) {
 
     return false;  // Prevenir el comportamiento por defecto
 }
+
+function searchProducts() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();  // Captura el valor
+    const products = document.querySelectorAll('.product-info h3');  // Selecciona los nombres de productos
+
+    let found = false;  // Para controlar si se encuentra al menos un producto
+
+    products.forEach(product => {
+        const productName = product.textContent.toLowerCase();
+
+        if (productName.includes(searchTerm)) {
+            product.closest('.product').style.display = 'block';  // Muestra el producto si coincide
+            found = true;
+        } else {
+            product.closest('.product').style.display = 'none';  // Oculta el producto si no coincide
+        }
+    });
+
+    if (!found) {
+        alert('No se encontraron productos para: ' + searchTerm);
+    }
+}
