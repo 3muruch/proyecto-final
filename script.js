@@ -14,12 +14,12 @@ function renderCart() {
     let total = 0;
     cart.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = `${item.product} - $${item.price.toFixed(2)}`;
+        li.textContent = `${item.product} - $${Math.round(item.price)}`; // Precio sin decimales
         cartItems.appendChild(li);
         total += item.price;
     });
 
-    document.getElementById('total').textContent = `Total: $${total.toFixed(2)}`;
+    document.getElementById('total').textContent = `Total: $${Math.round(total)}`; // Total sin decimales
 }
 
 // Función para mostrar el formulario de contacto
@@ -88,7 +88,7 @@ function searchProducts() {
                     ${product.name}
                 `;
                 resultItem.onclick = function() {
-                    showProductModal(product); // Mostrar el modal con el producto
+                    showProductModal(product.name, product.image, product.price); // Usa la función del modal
                 };
                 searchResults.appendChild(resultItem);
             });
@@ -103,17 +103,20 @@ function searchProducts() {
 }
 
 // Función para mostrar el modal del producto
-function showProductModal(product) {
-    document.getElementById('modal-product-name').textContent = product.name;
-    document.getElementById('modal-product-image').src = product.image;
-    document.getElementById('modal-product-price').textContent = `Precio: $${product.price.toFixed(2)}`; // Muestra el precio
+
+function showProductModal(name, image, price) {
+    document.getElementById('modal-product-name').textContent = name;
+    document.getElementById('modal-product-image').src = image;
+    document.getElementById('modal-product-price').textContent = `Precio: $${Math.floor(price)}`; // Mostrar sin decimales
     document.getElementById('product-modal').style.display = 'block'; // Mostrar el modal
 }
+
 
 // Función para cerrar el modal
 function closeModal() {
     document.getElementById('product-modal').style.display = 'none';
 }
+
 
 // Función para agregar el producto al carrito
 function addProductToCart() {
@@ -162,7 +165,7 @@ function changeQuantity(delta) {
 function addToCartFromModal() {
     const productName = document.getElementById('modal-product-name').textContent;
     const quantity = parseInt(document.getElementById('quantity').value);
-    const productPrice = parseFloat(document.getElementById('modal-product-price').textContent.replace('Precio: $', '')); // Obtiene el precio
+    const productPrice = Math.round(parseFloat(document.getElementById('modal-product-price').textContent.replace('Precio: $', ''))); // Precio sin decimales
     for (let i = 0; i < quantity; i++) {
         addToCart(`${productName} (${selectedSize})`, productPrice);
     }

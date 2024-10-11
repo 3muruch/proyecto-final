@@ -59,145 +59,144 @@
 
                 <!-- Primera fila de productos -->
                 <div class="row">
-                    <div class="product">
-
+                    <div class="product"onclick="showProductModal('Remera Oversize Beige', './img/remera4.jpeg',6000)">
                         <img src="./img/remera4.jpeg" alt="Remera Oversize Beige">
                         <div class="product-info">
                             <h3>Remera Oversize Beige</h3>
-                            <p>$25.00</p>
-                            <button onclick="addToCart('Remera Oversize Beige', 25.00)">Agregar al carrito</button>
+                            <p>$6000</p>
+                            <button onclick="addToCart('Remera Oversize Beige', 6000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Remera Oversize Black', './img/remera.jpeg', 6000)">
                         <img src="./img/remera.jpeg" alt="Remera Oversize Black">
                         <div class="product-info">
                             <h3>Remera Oversize Black</h3>
-                            <p>$40.00</p>
-                            <button onclick="addToCart('Remera Oversize Black', 40.00)">Agregar al carrito</button>
+                            <p>$6000</p>
+                            <button onclick="addToCart('Remera Oversize Black', 6000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Remera Oversize White', './img/remera2.jpeg', 6000)">
                         <img src="./img/remera2.jpeg" alt="Remera Oversize White">
                         <div class="product-info">
                             <h3>Remera Oversize White</h3>
-                            <p>$30.00</p>
-                            <button onclick="addToCart('Remera Oversize White', 30.00)">Agregar al carrito</button>
+                            <p>$6000</p>
+                            <button onclick="addToCart('Remera Oversize White', 6000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Remera Oversize Marron', './img/remera3.jpg', 6000)">
                         <img src="./img/remera3.jpg" alt="Remera Oversize Marron">
                         <div class="product-info">
                             <h3>Remera Oversize Marron</h3>
-                            <p>$120.00</p>
-                            <button onclick="addToCart('Remera Oversize Marron', 120.00)">Agregar al carrito</button>
+                            <p>$6000</p>
+                            <button onclick="addToCart('Remera Oversize Marron', 6000)">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Segunda fila de productos (Joggers) -->
                 <div class="row">
-                    <div class="product">
+                    <div class="product"onclick="showProductModal('Joggers Black', './img/pantalon1.webp',10000)">
                         <img src="./img/pantalon1.webp" alt="Joggers Black">
                         <div class="product-info">
                             <h3>Joggers Black</h3>
-                            <p>$45.00</p>
-                            <button onclick="addToCart('Joggers Black', 45.00)">Agregar al carrito</button>
+                            <p>$10000</p>
+                            <button onclick="addToCart('Joggers Black', 10000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product"onclick="showProductModal('Joggers Gris', './img/pantalon2.webp',10000)">
                         <img src="./img/pantalon2.webp" alt="Joggers Gris">
                         <div class="product-info">
                             <h3>Joggers Gris</h3>
-                            <p>$50.00</p>
-                            <button onclick="addToCart('Joggers Gris', 50.00)">Agregar al carrito</button>
+                            <p>$10000</p>
+                            <button onclick="addToCart('Joggers Gris', 10000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Joggers Gris Claro', './img/pantalon3.webp',10000)">
                         <img src="./img/pantalon3.webp" alt="Joggers Gris Claro">
                         <div class="product-info">
                             <h3>Joggers Gris Claro</h3>
-                            <p>$150.00</p>
-                            <button onclick="addToCart('Joggers Gris Claro', 150.00)">Agregar al carrito</button>
+                            <p>$10000</p>
+                            <button onclick="addToCart('Joggers Gris Claro', 10000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Joggers Beige', './img/pantalon4.webp',10000)">
                         <img src="./img/pantalon4.webp" alt="Joggers Beige">
                         <div class="product-info">
                             <h3>Joggers Beige</h3>
-                            <p>$80.00</p>
-                            <button onclick="addToCart('Joggers Beige', 80.00)">Agregar al carrito</button>
+                            <p>$10000</p>
+                            <button onclick="addToCart('Joggers Beige', 10000)">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Fila de productos (Shorts) -->
                 <div class="row">
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Short Deportivo Black', './img/short1.webp',7000)">
                         <img src="./img/short1.webp" alt="Short Deportivo Black">
                         <div class="product-info">
                             <h3>Short Deportivo Black</h3>
-                            <p>$30.00</p>
-                            <button onclick="addToCart('Short Deportivo Black', 30.00)">Agregar al carrito</button>
+                            <p>$7000</p>
+                            <button onclick="addToCart('Short Deportivo Black', 7000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Short Deportivo Gris', './img/short2.webp',7000)">
                         <img src="./img/short2.webp" alt="Short Deportivo Gris">
                         <div class="product-info">
                             <h3>Short Deportivo Gris</h3>
-                            <p>$35.00</p>
-                            <button onclick="addToCart('Short Deportivo Gris', 35.00)">Agregar al carrito</button>
+                            <p>$7000</p>
+                            <button onclick="addToCart('Short Deportivo Gris', 7000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Short Deportivo Beige', './img/short3.webp',7000)">
                         <img src="./img/short3.webp" alt="Short Deportivo Beige">
                         <div class="product-info">
                             <h3>Short Deportivo Beige</h3>
-                            <p>$40.00</p>
-                            <button onclick="addToCart('Short Deportivo Beige', 40.00)">Agregar al carrito</button>
+                            <p>$7000</p>
+                            <button onclick="addToCart('Short Deportivo Beige', 7000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Short Deportivo Rojo', './img/short4.webp',7000)">
                         <img src="./img/short4.webp" alt="Short Deportivo Azul">
                         <div class="product-info">
                             <h3>Short Deportivo Rojo</h3>
-                            <p>$45.00</p>
-                            <button onclick="addToCart('Short Deportivo Azul', 45.00)">Agregar al carrito</button>
+                            <p>$7000</p>
+                            <button onclick="addToCart('Short Deportivo Azul', 7000)">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Nueva fila de productos (Buzos) -->
                 <div class="row">
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Buzo Hoodie Black', './img/buzo1.webp',15000)">
                         <img src="./img/buzo1.webp" alt="Buzo Hoodie Black">
                         <div class="product-info">
                             <h3>Buzo Hoodie Black</h3>
-                            <p>$60.00</p>
-                            <button onclick="addToCart('Buzo Hoodie Black', 60.00)">Agregar al carrito</button>
+                            <p>$15000</p>
+                            <button onclick="addToCart('Buzo Hoodie Black', 15000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Buzo Hoodie Beige', './img/buzo2.webp',15000)">
                         <img src="./img/buzo2.webp" alt="Buzo Hoodie Beige">
                         <div class="product-info">
                             <h3>Buzo Hoodie Beige</h3>
-                            <p>$65.00</p>
-                            <button onclick="addToCart('Buzo Hoodie Beige', 65.00)">Agregar al carrito</button>
+                            <p>$15000</p>
+                            <button onclick="addToCart('Buzo Hoodie Beige', 15000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Buzo Crewneck Azul', './img/buzo3.webp',15000)">
                         <img src="./img/buzo3.webp" alt="Buzo Crewneck Gris">
                         <div class="product-info">
                             <h3>Buzo Crewneck Azul</h3>
-                            <p>$70.00</p>
-                            <button onclick="addToCart('Buzo Crewneck Gris', 70.00)">Agregar al carrito</button>
+                            <p>$15000</p>
+                            <button onclick="addToCart('Buzo Crewneck Gris', 15000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" onclick="showProductModal('Buzo Crewneck Gris', './img/buzo4.webpp',15000)">
                         <img src="./img/buzo4.webp" alt="Buzo Crewneck Azul">
                         <div class="product-info">
                             <h3>Buzo Crewneck Gris</h3>
-                            <p>$75.00</p>
-                            <button onclick="addToCart('Buzo Crewneck Azul', 75.00)">Agregar al carrito</button>
+                            <p>$15000</p>
+                            <button onclick="addToCart('Buzo Crewneck Azul', 15000)">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
