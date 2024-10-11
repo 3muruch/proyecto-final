@@ -34,9 +34,9 @@
                 </nav>
                 
                 <div class="search-cart">
-                <input type="text" id="search-input" placeholder="Buscar...">
-<button class="search-button" onclick="searchProducts()"><i class="fas fa-search"></i></button>
-
+                    <input type="text" id="search-input" placeholder="Buscar..." onkeyup="searchProducts()">
+                    <div id="search-results"></div>
+                    <button class="search-button"><i class="fas fa-search"></i></button>
                     <button class="user-button" onclick="window.location.href='login.php';"><i class="fas fa-user"></i></button>
                     <button class="cart-button"><i class="fas fa-shopping-cart"></i></button>
                 </div>
@@ -60,6 +60,7 @@
                 <!-- Primera fila de productos -->
                 <div class="row">
                     <div class="product">
+
                         <img src="./img/remera4.jpeg" alt="Remera Oversize Beige">
                         <div class="product-info">
                             <h3>Remera Oversize Beige</h3>
@@ -158,7 +159,7 @@
                     <div class="product">
                         <img src="./img/short4.webp" alt="Short Deportivo Azul">
                         <div class="product-info">
-                            <h3>Short Deportivo Azul</h3>
+                            <h3>Short Deportivo Rojo</h3>
                             <p>$45.00</p>
                             <button onclick="addToCart('Short Deportivo Azul', 45.00)">Agregar al carrito</button>
                         </div>
@@ -186,7 +187,7 @@
                     <div class="product">
                         <img src="./img/buzo3.webp" alt="Buzo Crewneck Gris">
                         <div class="product-info">
-                            <h3>Buzo Crewneck Gris</h3>
+                            <h3>Buzo Crewneck Azul</h3>
                             <p>$70.00</p>
                             <button onclick="addToCart('Buzo Crewneck Gris', 70.00)">Agregar al carrito</button>
                         </div>
@@ -194,7 +195,7 @@
                     <div class="product">
                         <img src="./img/buzo4.webp" alt="Buzo Crewneck Azul">
                         <div class="product-info">
-                            <h3>Buzo Crewneck Azul</h3>
+                            <h3>Buzo Crewneck Gris</h3>
                             <p>$75.00</p>
                             <button onclick="addToCart('Buzo Crewneck Azul', 75.00)">Agregar al carrito</button>
                         </div>
@@ -248,6 +249,39 @@
 
     </div>
 </div>
+<!-- Modal -->
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-inner">
+            <img id="modal-product-image" src="" alt="Producto">
+            <div class="modal-info">
+                <h2 id="modal-product-name"></h2>
+                <p id="modal-product-price"></p>
+                
+                <!-- Contenedor para talles -->
+                <div class="size-container">
+                    <label>Tamaño:</label>
+                    <div class="size-option" onclick="selectSize('S')">S</div>
+                    <div class="size-option" onclick="selectSize('M')">M</div>
+                    <div class="size-option" onclick="selectSize('L')">L</div>
+                    <div class="size-option" onclick="selectSize('XL')">XL</div>
+                </div>
+
+                <!-- Contenedor para cantidad -->
+                <div class="quantity-container">
+                    <label>Cantidad:</label>
+                    <button class="quantity-button" onclick="changeQuantity(-1)">-</button>
+                    <input type="number" id="quantity" value="1" min="1" readonly>
+                    <button class="quantity-button" onclick="changeQuantity(1)">+</button>
+                </div>
+                <br>
+                <button onclick="addToCartFromModal()">Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <script src="script.js"></script>
 
