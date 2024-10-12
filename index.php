@@ -184,19 +184,19 @@
                         </div>
                     </div>
                     <div class="product" onclick="showProductModal('Buzo Crewneck Azul', './img/buzo3.webp',15000)">
-                        <img src="./img/buzo3.webp" alt="Buzo Crewneck Gris">
+                        <img src="./img/buzo3.webp" alt="Buzo Crewneck Azul">
                         <div class="product-info">
                             <h3>Buzo Crewneck Azul</h3>
                             <p>$15000</p>
-                            <button onclick="addToCart('Buzo Crewneck Gris', 15000)">Agregar al carrito</button>
+                            <button onclick="addToCart('Buzo Crewneck Azul', 15000)">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="product" onclick="showProductModal('Buzo Crewneck Gris', './img/buzo4.webpp',15000)">
-                        <img src="./img/buzo4.webp" alt="Buzo Crewneck Azul">
+                    <div class="product" onclick="showProductModal('Buzo Crewneck Gris', './img/buzo4.webp',15000)">
+                        <img src="./img/buzo4.webp" alt="Buzo Crewneck Gris">
                         <div class="product-info">
                             <h3>Buzo Crewneck Gris</h3>
                             <p>$15000</p>
-                            <button onclick="addToCart('Buzo Crewneck Azul', 15000)">Agregar al carrito</button>
+                            <button onclick="addToCart('Buzo Crewneck Gris', 15000)">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -260,7 +260,7 @@
                 
                 <!-- Contenedor para talles -->
                 <div class="size-container">
-                    <label>Tamaño:</label>
+                    <label>Talle:</label>
                     <div class="size-option" onclick="selectSize('S')">S</div>
                     <div class="size-option" onclick="selectSize('M')">M</div>
                     <div class="size-option" onclick="selectSize('L')">L</div>
