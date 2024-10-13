@@ -63,7 +63,11 @@ const products = [
     { name: "Buzo Hoodie Black", image: "./img/buzo1.webp", price: 35 },
     { name: "Buzo Hoodie Beige", image: "./img/buzo2.webp", price: 35 },
     { name: "Buzo Hoodie Azul", image: "./img/buzo3.webp", price: 35 },
-    { name: "Buzo Hoodie Gris", image: "./img/buzo4.webp", price: 35 }
+    { name: "Buzo Hoodie Gris", image: "./img/buzo4.webp", price: 35 },
+    { name: "Jean Cargo Mom Negro", image: "./img/jean1.jpg", price: 35 },
+    { name: "Jean Cargo Mom Beige", image: "./img/jean2.jpg", price: 35 },
+    { name: "Jean Cargo Mom Marron", image: "./img/jean3.jpg", price: 35 },
+    { name: "Jean Cargo Mom Azul", image: "./img/jean4.jpg", price: 35 }
 ];
 
 // Función de búsqueda de productos
@@ -171,3 +175,36 @@ function addToCartFromModal() {
     }
     closeModal(); // Cierra el modal después de agregar al carrito
 }
+
+document.querySelectorAll('.dropdown a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Evita el comportamiento por defecto del enlace
+
+        const targetId = this.getAttribute('href'); // Obtiene el ID del destino
+        const targetElement = document.querySelector(targetId); // Selecciona el elemento de destino
+
+        // Desplazamiento suave
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.querySelectorAll('.dropdown a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Evita el comportamiento por defecto del enlace
+
+        const targetId = this.getAttribute('href'); // Obtiene el ID del destino
+        const targetElement = document.querySelector(targetId); // Selecciona el elemento de destino
+
+        // Desplazamiento suave
+        const offset = 100; // Ajusta este valor según la altura de tu encabezado
+        const elementPosition = targetElement.getBoundingClientRect().top; // Obtiene la posición del elemento
+        const offsetPosition = elementPosition + window.pageYOffset - offset; // Ajusta la posición
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});

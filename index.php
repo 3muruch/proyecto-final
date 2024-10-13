@@ -21,13 +21,14 @@
                         <li><a href="index.php">Inicio</a></li>
                         <li>
             <a href="#">Productos</a>
-            <div class="dropdown">
-                
-                <div class="product">Remera</div>
-                <div class="product">Joggers</div>
-                <div class="product">Short</div>
-                <div class="product">Buzo</div>
-            </div>
+            <ul class="dropdown">
+            
+                <li><a href="#remeras">Remeras</a></li>
+                <li><a href="#joggers">Joggers</a></li>
+                <li><a href="#shorts">Shorts</a></li>
+                <li><a href="#buzos">Buzos</a></li>
+                <li><a href="#jeans">jeans</a></li>
+            </ul>
         </li>
                        <li><a href="#" id="contact-link">Contacto</a></li>
                     </ul>
@@ -55,6 +56,7 @@
 
         <section class="product-grid">
             <div class="container">
+            <div id="remeras" class="product-section">
                 <h2>Nuevos Productos</h2>
 
                 <!-- Primera fila de productos -->
@@ -94,6 +96,8 @@
                 </div>
 
                 <!-- Segunda fila de productos (Joggers) -->
+                <div id="joggers" class="product-section">
+                
                 <div class="row">
                     <div class="product"onclick="showProductModal('Joggers Black', './img/pantalon1.webp',10000)">
                         <img src="./img/pantalon1.webp" alt="Joggers Black">
@@ -130,6 +134,7 @@
                 </div>
 
                 <!-- Fila de productos (Shorts) -->
+                <div id="shorts" class="product-section">
                 <div class="row">
                     <div class="product" onclick="showProductModal('Short Deportivo Black', './img/short1.webp',7000)">
                         <img src="./img/short1.webp" alt="Short Deportivo Black">
@@ -166,6 +171,7 @@
                 </div>
 
                 <!-- Nueva fila de productos (Buzos) -->
+                <div id="buzos" class="product-section">
                 <div class="row">
                     <div class="product" onclick="showProductModal('Buzo Hoodie Black', './img/buzo1.webp',15000)">
                         <img src="./img/buzo1.webp" alt="Buzo Hoodie Black">
@@ -197,6 +203,43 @@
                             <h3>Buzo Crewneck Gris</h3>
                             <p>$15000</p>
                             <button onclick="addToCart('Buzo Crewneck Gris', 15000)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila de productos (Shorts) -->
+                <div id="jeans" class="product-section">
+                <div class="row">
+                    <div class="product" onclick="showProductModal('Jean Cargo Mom Negro', './img/jean1.jpg',20000)">
+                        <img src="./img/jean1.jpg" alt="Jean Cargo Mom Negro">
+                        <div class="product-info">
+                            <h3>Jean Cargo Mom Negro</h3>
+                            <p>$20000</p>
+                            <button onclick="addToCart('Jean Cargo Mom Negro', 20000)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="showProductModal('Jean Cargo Mom Beige', './img/jean2.jpg',7000)">
+                        <img src="./img/jean2.jpg" alt="Jean Cargo Mom Beige">
+                        <div class="product-info">
+                            <h3>Jean Cargo Mom Beige</h3>
+                            <p>$20000</p>
+                            <button onclick="addToCart('Jean Cargo Mom Beige', 20000)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="showProductModal('Jean Cargo Mom Marron', './img/jean3.jpg',7000)">
+                        <img src="./img/jean3.jpg" alt="Jean Cargo Mom Marron">
+                        <div class="product-info">
+                            <h3>Jean Cargo Mom Marron</h3>
+                            <p>$20000</p>
+                            <button onclick="addToCart('Jean Cargo Mom Marron', 20000)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="showProductModal('Jean Cargo Mom Azul', './img/jean4.jpg',7000)">
+                        <img src="./img/jean4.jpg" alt="Jean Cargo Mom Azul">
+                        <div class="product-info">
+                            <h3>Jean Cargo Mom Azul</h3>
+                            <p>$20000</p>
+                            <button onclick="addToCart('Jean Cargo Mom Azul', 20000)">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
