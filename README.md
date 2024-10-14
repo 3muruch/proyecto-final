@@ -6,21 +6,9 @@ http://localhost/proyecto/    ,ahi ponen enter y les va aparecer mi pagina. hice
 
 
 explicado de mejor manera: 
-
-# Tienda m77 - Proyecto Web
+# Proyecto Tienda m77
 
 Este proyecto es una página web de una tienda de ropa que incluye funcionalidades implementadas con PHP, CSS y JavaScript.
-
-## Contenido del proyecto
-- **index.php**: Página principal de la tienda.
-- **login.php**: Página de inicio de sesión.
-- **registro.php**: Página de registro de usuarios.
-- **usuario_login.php**: Funcionalidad para validar los usuarios con la base de datos.
-- **registros.php**: Funcionalidad para registrar nuevos usuarios.
-- **style.css**: Archivo CSS principal para el estilo de la página.
-- **login.css**: Estilos específicos para la página de inicio de sesión.
-- **registro.css**: Estilos específicos para la página de registro.
-- **script.js**: Archivo JavaScript para la funcionalidad interactiva.
 
 ## Cómo ejecutar este proyecto localmente
 
@@ -36,3 +24,23 @@ Para que puedan ver y probar el proyecto completo, que incluye archivos PHP, es 
    - Descarga este repositorio como un archivo ZIP o clónalo utilizando Git.
    ```bash
    git clone https://github.com/tuusuario/tu-repositorio.git
+Mover los archivos a la carpeta de XAMPP:
+
+Una vez que hayas descargado los archivos, cópialos a la carpeta htdocs de XAMPP.
+La ruta predeterminada para htdocs suele ser:
+En Windows: C:/xampp/htdocs/
+En Mac/Linux: /opt/lampp/htdocs/
+Iniciar el servidor Apache:
+
+Abre el panel de control de XAMPP.
+Haz clic en "Start" para iniciar el servidor Apache.
+Acceder a la página web:
+
+Abre tu navegador y visita la siguiente URL:
+arduino
+Copiar código
+http://localhost/tu-proyecto
+Configurar la base de datos (si es necesario):
+
+Si el proyecto incluye una base de datos MySQL, debes crearla en phpMyAdmin (accesible desde http://localhost/phpmyadmin).
+Importa el archivo .sql que viene con el proyecto (si lo tienes) y actualiza los archivos de conexión a la base de datos con las credenciales de MySQL.
