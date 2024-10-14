@@ -4,6 +4,8 @@ despues abren el XAMPP y en la columna que dice ACTIONS ponen stop,stop y luego 
 de la pagina le va aparece esto http://localhost/phpmyadmin/, bueno en el enlace borran "phpmyadmin" y ponen el nombre de la carpeta osea "proyecto" , que seria asi
 http://localhost/proyecto/    ,ahi ponen enter y les va aparecer mi pagina. hice todo lo posible para mostrar mi pagina de otra menera pero no pude hacerlo, asi que esta fue la unica manera.
 
+otra manera de poder ver la pagina es convertir el index.php a index.html. pero el problema va ser que el login y registro no va funcionar pero si van a poder ver la pagina bien.
+
 
 explicado de mejor manera: 
 # Proyecto Tienda m77
