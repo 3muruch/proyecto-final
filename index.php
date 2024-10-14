@@ -39,6 +39,7 @@
                     <div id="search-results"></div>
                     <button class="search-button"><i class="fas fa-search"></i></button>
                     <button class="user-button" onclick="window.location.href='login.php';"><i class="fas fa-user"></i></button>
+                    
                     <button class="cart-button" onclick="toggleCartDetails()">
     <i class="fas fa-shopping-cart"></i>
 </button>
@@ -48,6 +49,7 @@
     <p>Total: $XXX.XX</p>
     <button class="checkout-button">Proceder al Pago</button>
 </div>
+
 
                 </div>
             </div>
@@ -363,6 +365,7 @@
         </div>
     </div>
 </div>
+
 
     <script src="script.js"></script>
 
