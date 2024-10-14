@@ -39,7 +39,16 @@
                     <div id="search-results"></div>
                     <button class="search-button"><i class="fas fa-search"></i></button>
                     <button class="user-button" onclick="window.location.href='login.php';"><i class="fas fa-user"></i></button>
-                    <button class="cart-button"><i class="fas fa-shopping-cart"></i></button>
+                    <button class="cart-button" onclick="toggleCartDetails()">
+    <i class="fas fa-shopping-cart"></i>
+</button>
+<div id="cart-details" class="cart-details" style="display: none;">
+    <h3>Detalles del Carrito</h3>
+    <p>Aquí van los detalles de los productos en tu carrito.</p>
+    <p>Total: $XXX.XX</p>
+    <button class="checkout-button">Proceder al Pago</button>
+</div>
+
                 </div>
             </div>
         </div>
@@ -324,6 +333,36 @@
     </div>
 </div>
 
+<!-- Modal de Pago -->
+<div id="payment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Proceder al Pago</h2>
+        <form id="payment-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+
+            <label for="address">Dirección de Envío:</label>
+            <input type="text" id="address" required>
+
+            <label for="card-info">Información de Tarjeta de Crédito:</label>
+            <input type="text" id="card-info" required>
+
+            <label for="shipping-option">Opciones de Envío:</label>
+            <select id="shipping-option" required>
+                <option value="standard">Envío Estándar</option>
+                <option value="express">Envío Expreso</option>
+            </select>
+            <button type="submit">Confirmar Pago</button>
+        </form>
+        <div id="order-summary" style="display:none;">
+            <h3>Resumen del Pedido</h3>
+            <div id="summary-details"></div>
+            <button onclick="confirmPayment()">Confirmar</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 

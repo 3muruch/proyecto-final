@@ -1,26 +1,89 @@
-let cart = [];
+let cartItems = []; // Array para almacenar los productos del carrito
 
 // Función para agregar productos al carrito
-function addToCart(product, price) {
-    cart.push({ product, price });
-    renderCart();
+function addToCart(productName, productPrice) {
+    const existingProduct = cartItems.find(item => item.name === productName);
+    if (existingProduct) {
+        existingProduct.quantity += 1; // Aumentar la cantidad si ya existe
+    } else {
+        cartItems.push({ name: productName, price: productPrice, quantity: 1 }); // Agregar como nuevo
+    }
+    updateCartDetails(); // Actualizar la visualización del carrito
 }
 
-// Función para renderizar el carrito
-function renderCart() {
-    const cartItems = document.getElementById('cart-items');
-    cartItems.innerHTML = ''; // Limpiar resultados previos
+// Función para actualizar los detalles del carrito
+function updateCartDetails() {
+    const cartDetails = document.getElementById('cart-details');
+    cartDetails.innerHTML = '<h3>Detalles del Carrito</h3>'; // Reinicia el contenido
 
-    let total = 0;
-    cart.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.product} - $${Math.round(item.price)}`; // Precio sin decimales
-        cartItems.appendChild(li);
-        total += item.price;
+    let total = 0; // Inicializar total
+    cartItems.forEach(item => {
+        total += item.price * item.quantity; // Sumar al total
+        cartDetails.innerHTML += `
+            <p>
+                ${item.name} - $${item.price} (Cantidad: ${item.quantity}) 
+                <button onclick="removeFromCart('${item.name}')">Eliminar</button>
+            </p>`; // Agregar el producto
     });
 
-    document.getElementById('total').textContent = `Total: $${Math.round(total)}`; // Total sin decimales
+    cartDetails.innerHTML += `<p>Total: $${total}</p>`; // Mostrar el total
+    cartDetails.innerHTML += '<button class="checkout-button">Proceder al Pago</button>'; // Agregar botón de pago
 }
+
+// Función para eliminar productos del carrito
+function removeFromCart(productName) {
+    cartItems = cartItems.filter(item => item.name !== productName); // Filtrar el producto
+    updateCartDetails(); // Actualizar la visualización
+}
+
+// Función para mostrar/ocultar detalles del carrito
+function toggleCartDetails() {
+    const cartDetails = document.getElementById('cart-details');
+    cartDetails.style.display = (cartDetails.style.display === 'none' || cartDetails.style.display === '') ? 'block' : 'none'; // Alternar visibilidad
+}
+
+
+document.querySelector('.checkout-button').addEventListener('click', function() {
+    // Verifica si hay elementos en el carrito
+    if (cartItems.length === 0) {
+        alert("Tu carrito está vacío. Agrega productos antes de proceder al pago.");
+        return;
+    }
+
+    // Muestra el modal
+    document.getElementById('payment-modal').style.display = "block";
+    updateOrderSummary();
+});
+
+// Función para actualizar el resumen del pedido
+function updateOrderSummary() {
+    const summaryDetails = document.getElementById('summary-details');
+    summaryDetails.innerHTML = ''; // Reinicia el contenido
+
+    let total = 0; // Inicializar total
+    cartItems.forEach(item => {
+        total += item.price; // Sumar al total
+        summaryDetails.innerHTML += `<p>${item.name} - $${item.price}</p>`; // Agregar el producto
+    });
+
+    summaryDetails.innerHTML += `<p>Total: $${total}</p>`; // Mostrar el total
+    document.getElementById('order-summary').style.display = "block"; // Muestra el resumen
+    document.getElementById('payment-form').style.display = "none"; // Ocultar el formulario de pago
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    document.getElementById('payment-modal').style.display = "none";
+    document.getElementById('order-summary').style.display = "none"; // Ocultar resumen al cerrar
+    document.getElementById('payment-form').reset(); // Reiniciar el formulario
+}
+
+// Manejar el evento de envío del formulario
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el comportamiento por defecto
+    updateOrderSummary(); // Mostrar el resumen del pedido
+});
+
 
 // Función para mostrar el formulario de contacto
 document.getElementById('contact-link').onclick = function(event) {

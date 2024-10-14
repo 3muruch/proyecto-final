@@ -84,7 +84,7 @@ nav {
 }
 
 /* Mostrar el dropdown al pasar el mouse */
-div:hover .dropdown {
+li:hover .dropdown {
     display: block; /* Muestra el dropdown al pasar el mouse */
      /* Comienza como invisible */
     transform: translateY(-10px); /* Mueve el dropdown hacia arriba al aparecer */
@@ -92,7 +92,7 @@ div:hover .dropdown {
 }
 
 /* Hacer que sea visible después de un breve retraso */
-div:hover .dropdown {
+li:hover .dropdown {
     opacity: 1; /* Hacer visible */
     transform: translateY(0); /* Restablece la posición */
 }
@@ -360,6 +360,19 @@ footer p {
 #cart ul li {
     font-size: 1.2em;
     margin-bottom: 10px;
+}
+.cart-details {
+    background-color: #000000; /* Color de fondo del rectángulo */
+    border: 1px solid #ccc; /* Borde del rectángulo */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    padding: 20px; /* Espaciado interno */
+    width: 300px; /* Ancho del rectángulo */
+    position: absolute; /* Para que se posicione correctamente */
+    top: 50px; /* Ajusta la posición según sea necesario */
+    right: 0; /* Alinea a la derecha del botón del carrito */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: opacity 0.3s ease; /* Suaviza la aparición */
 }
 
 #total {
