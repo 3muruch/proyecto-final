@@ -24,23 +24,40 @@ Para que puedan ver y probar el proyecto completo, que incluye archivos PHP, es 
    - Descarga este repositorio como un archivo ZIP o clónalo utilizando Git.
    ```bash
    git clone https://github.com/tuusuario/tu-repositorio.git
-Mover los archivos a la carpeta de XAMPP:
 
-Una vez que hayas descargado los archivos, cópialos a la carpeta htdocs de XAMPP.
-La ruta predeterminada para htdocs suele ser:
-En Windows: C:/xampp/htdocs/
-En Mac/Linux: /opt/lampp/htdocs/
-Iniciar el servidor Apache:
+3. **Mover los archivos a la carpeta de XAMPP**:
+- Una vez que hayas descargado los archivos, cópialos a la carpeta htdocs de XAMPP.
+- La ruta predeterminada para htdocs suele ser:
+-En Windows: C:/xampp/htdocs/
+-En Mac/Linux: /opt/lampp/htdocs/
 
-Abre el panel de control de XAMPP.
-Haz clic en "Start" para iniciar el servidor Apache.
-Acceder a la página web:
 
-Abre tu navegador y visita la siguiente URL:
-arduino
-Copiar código
-http://localhost/tu-proyecto
-Configurar la base de datos (si es necesario):
+4. **Iniciar el servidor Apache**:
+   
+- Abre el panel de control de XAMPP.
+- Haz clic en "Start" para iniciar el servidor Apache.
+  
+5.**Acceder a la página web**:
+
+- Abre tu navegador y visita la siguiente URL:
+
+http://localhost/proyecto
+
+5.Configurar la base de datos (SI ES NECESARIO):
 
 Si el proyecto incluye una base de datos MySQL, debes crearla en phpMyAdmin (accesible desde http://localhost/phpmyadmin).
 Importa el archivo .sql que viene con el proyecto (si lo tienes) y actualiza los archivos de conexión a la base de datos con las credenciales de MySQL.
+
+
+ESTO ES POR SI LA BASE DE DATOS NO FUNCIONA
+
+VAN AL ARCHIVO config.php en donde dice ("localhost:3309"),lo cambia a ("localhost:3306"), asi como este codigo(hacer si no funciona la base de datos:  
+```bash 
+
+<?php
+
+  $conexion = mysqli_connect("localhost:3306", "root", "", "tienda");
+
+
+?>
+
