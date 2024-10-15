@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda m77</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">                     
 </head>
 <body>
@@ -58,13 +60,24 @@
     </header>
     
     <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Explora nuestra colección</h2>
-                <p>Encuentra la ropa perfecta para cada ocasión.</p>
-                <button class="explore-button">Explorar</button>
-            </div>
-        </section>
+    <section class="hero">
+    <div class="container">
+        <h2>Explora nuestra colección</h2>
+        <p>Encuentra la ropa perfecta para cada ocasión.</p>
+        
+    </div>
+    <video class="background-video" autoplay muted loop>
+        <source src="./img/video.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+    <div class="product-images">
+        <img src="./img/buzo4.webp" alt="Producto 1">
+        <img src="./img/buzo1.webp" alt="Producto 2">
+    </div>
+
+</section>
+
+
 
         <section class="product-grid">
             <div class="container">
@@ -258,13 +271,7 @@
             </div>
         </section>
 
-        <section id="cart">
-            <div class="container">
-                <h2>Carrito de Compras</h2>
-                <ul id="cart-items"></ul>
-                <p id="total">Total: $0.00</p>
-            </div>
-        </section>
+        
     </main>
 
     <footer>

@@ -199,14 +199,17 @@ li:hover .dropdown {
 
 /* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
     position: relative;
-    animation: slide-down 1s ease;
+    overflow: hidden;
+    text-align: center;
+    min-height: 400px;
+    padding: 50px 20px; /* Ajusta el padding según sea necesario */
 }
+.container {
+    position: relative; /* Asegura que el texto esté encima del video */
+    z-index: 2; /* Asegura que el texto esté por encima del video */
 
+}
 .hero::after {
     content: '';
     position: absolute;
@@ -220,30 +223,47 @@ li:hover .dropdown {
 
 .hero h2 {
     font-size: 3em;
-    margin: 0;
+    margin: 250;
     letter-spacing: 2px;
+    color: white; /* Cambia el color del texto del encabezado a blanco */
 }
 
 .hero p {
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-top: 60px;
+    color: white; /* Cambia el color del texto del encabezado a blanco */
+}
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    object-fit: cover; /* Asegura que el video cubra toda la sección */
+    transform: translate(-50%, -50%);
+}
+.product-images {
+    display: flex; /* Usar flexbox para las imágenes */
+    justify-content: space-between; /* Espacio entre las imágenes */
+    position: absolute; /* Posicionar las imágenes */
+    width: 100%; /* Asegurar que ocupen el 100% del ancho */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar el centrado vertical */
+    z-index: 3; /* Asegurarse de que las imágenes estén encima del video */
+    padding: 5 10px; /* Espaciado a los lados */
+    
 }
 
-.explore-button {
-    background-color: #ff6f61;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+.product-images img {
+    width: 350px; /* Ajustar el ancho de las imágenes */
+    height: auto; /* Mantener la proporción de las imágenes */
+    border: 2px solid rgb(0, 0, 0); /* Agregar borde blanco opcional */
+    border-radius: 10px; /* Redondear bordes opcional */
 }
 
-.explore-button:hover {
-    background-color: #e65b4e;
-}
 
 /* Product Grid */
 .product-grid {
