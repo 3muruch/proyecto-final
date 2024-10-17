@@ -258,7 +258,7 @@ li:hover .dropdown {
 }
 
 .product-images img {
-    width: 350px; /* Ajustar el ancho de las imágenes */
+    width: 230px; /* Ajustar el ancho de las imágenes */
     height: auto; /* Mantener la proporción de las imágenes */
     border: 2px solid rgb(0, 0, 0); /* Agregar borde blanco opcional */
     border-radius: 10px; /* Redondear bordes opcional */

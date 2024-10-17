@@ -71,8 +71,8 @@
         Tu navegador no soporta la reproducción de videos.
     </video>
     <div class="product-images">
-        <img src="./img/buzo4.webp" alt="Producto 1">
-        <img src="./img/buzo1.webp" alt="Producto 2">
+        <img src="./img/buzo5.webp" alt="Producto 1">
+        <img src="./img/pantalon5.jpg" alt="Producto 2">
     </div>
 
 </section>

@@ -58,7 +58,7 @@
                         <input type="password" id="password" name="contraseña" required>
                     </div>
                   
-                    <button type="submit">Crear Cuenta</button>
+                    <button type="submit">registrar</button>
                 </form>
                 <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
             </div>
