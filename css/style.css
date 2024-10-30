@@ -258,7 +258,7 @@ li:hover .dropdown {
 }
 
 .product-images img {
-    width: 230px; /* Ajustar el ancho de las imágenes */
+    width: 350px; /* Ajustar el ancho de las imágenes */
     height: auto; /* Mantener la proporción de las imágenes */
     border: 2px solid rgb(0, 0, 0); /* Agregar borde blanco opcional */
     border-radius: 10px; /* Redondear bordes opcional */
@@ -592,27 +592,4 @@ label {
     text-align: center; /* Centrar el texto en el input */
 }
 
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Asegúrate de que el modal esté por encima de otros elementos */
-}
-
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px; /* Puedes ajustar el tamaño según tus necesidades */
-}
-
-.modal-content h3 {
-    margin: 0 0 10px 0;
-}
 
