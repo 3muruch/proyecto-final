@@ -1,3 +1,6 @@
+INTEGRANTES: Milton Muruchi,Joao Salazar y Joaquin Gil.
+
+
 hola soy Milton Muruchi y para poder ver mi pagina web que tiene php y fue la unica manera de que ustedes lo puedan ver es esta: primero tienen
 que descargar XAMPP(sino no lo tienen) luego ir ala carpeta de XAMPP y abrirla, luego abri la carpeta que dice "htdocs" y ahi ponen la carpeta de mi proyecto, 
 despues abren el XAMPP y en la columna que dice ACTIONS ponen stop,stop y luego admin de la segunda fila, ahi les va abrir una pagina automaticamente, en el enlace
