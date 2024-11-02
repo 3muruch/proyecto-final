@@ -54,15 +54,5 @@ Si el proyecto incluye una base de datos MySQL, debes crearla en phpMyAdmin (acc
 Importa el archivo .sql que viene con el proyecto (si lo tienes) y actualiza los archivos de conexión a la base de datos con las credenciales de MySQL.
 
 
-ESTO ES POR SI LA BASE DE DATOS NO FUNCIONA
 
-VAN AL ARCHIVO config.php en donde dice ("localhost:3309"),lo cambia a ("localhost:3306"), asi como este codigo(hacer si no funciona la base de datos:  
-```bash 
-
-<?php
-
-  $conexion = mysqli_connect("localhost:3306", "root", "", "tienda");
-
-
-?>
 
