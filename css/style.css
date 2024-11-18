@@ -593,3 +593,10 @@ label {
 }
 
 
+.size-guide-image {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del modal */
+    max-height: 61vh; /* Limita la altura de la imagen al 80% de la altura de la ventana */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    margin: 20px auto; /* Centra la imagen y agrega un poco de espacio alrededor */
+    display: block;
+}

@@ -271,3 +271,13 @@ document.querySelectorAll('.dropdown a').forEach(anchor => {
         });
     });
 });
+// Función para abrir el modal de la guía de talles
+function openSizeGuideModal() {
+    document.getElementById("size-guide-modal").style.display = "flex";
+}
+
+// Función para cerrar el modal de la guía de talles
+function closeSizeGuideModal() {
+    document.getElementById("size-guide-modal").style.display = "none";
+}
+

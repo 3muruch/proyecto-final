@@ -335,12 +335,22 @@
                 </div>
                 <br>
                 <button onclick="addToCartFromModal()">Agregar al Carrito</button>
+                <button onclick="openSizeGuideModal()">Guía de Talles</button>
             </div>
         </div>
     </div>
 </div>
 
 
+<!-- Modal de Guía de Talles -->
+<div id="size-guide-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSizeGuideModal()">&times;</span>
+        <div class="modal-inner">
+            <img src="./img/talle.jpeg" alt="Guía de Talles" class="size-guide-image">
+        </div>
+    </div>
+</div>
 
     
      
