@@ -271,13 +271,69 @@ document.querySelectorAll('.dropdown a').forEach(anchor => {
         });
     });
 });
-// Función para abrir el modal de la guía de talles
-function openSizeGuideModal() {
-    document.getElementById("size-guide-modal").style.display = "flex";
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const sizeGuideLink = document.getElementById('size-guide-link');
+    const sizeGuideDropdown = document.getElementById('size-guide-dropdown');
+    const guideItems = document.querySelectorAll('.guide-item');
+    const sizeGuideModal = document.getElementById('size-guide-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const guideTitle = document.getElementById('guide-title');
+    const guideImage = document.getElementById('guide-image');
+  
+    // Mostrar el submenú de la Guía de Talles al hacer clic
+    sizeGuideLink.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevenir acción por defecto del enlace
+      sizeGuideDropdown.style.display = sizeGuideDropdown.style.display === 'block' ? 'none' : 'block'; // Alternar el estado del submenú
+    });
+  
+    // Mostrar el modal con la imagen de la guía de talles al hacer clic en una opción
+    guideItems.forEach(item => {
+      item.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevenir acción por defecto del enlace
+  
+        const guide = item.getAttribute('data-guide');
+        
+        let title = "";
+        let imageSrc = "";
+        
+        // Dependiendo de la guía seleccionada, establecer título e imagen
+        if (guide === "remeras") {
+          title = "Guía de Remeras";
+          imageSrc = "./img/talle.jpeg"; // Cambia por la ruta correcta de la imagen
+        } else if (guide === "pantalones") {
+          title = "Guía de Pantalones";
+          imageSrc = "./img/talle2.jpg"; // Cambia por la ruta correcta de la imagen
+        } else if (guide === "shorts") {
+          title = "Guía de Shorts";
+          imageSrc = "./img/talle3.jpg"; // Cambia por la ruta correcta de la imagen
+        } else if (guide === "buzos") {
+        title = "Guía de buzos";
+        imageSrc = "./img/talle4.jpg"; // Cambia por la ruta correcta de la imagen
+      } else if (guide === "jeans") {
+        title = "Guía de jeans";
+        imageSrc = "./img/talle5.jpeg"; // Cambia por la ruta correcta de la imagen
+      } 
 
-// Función para cerrar el modal de la guía de talles
-function closeSizeGuideModal() {
-    document.getElementById("size-guide-modal").style.display = "none";
-}
-
+  
+        // Actualizar el contenido del modal
+        guideTitle.textContent = title;
+        guideImage.src = imageSrc;
+        
+        // Mostrar el modal
+        sizeGuideModal.style.display = 'flex'; // Cambiar a 'flex' para usar flexbox
+      });
+    });
+  
+    // Cerrar el modal cuando se hace clic en el botón de cierre
+    closeModalBtn.addEventListener('click', function() {
+      sizeGuideModal.style.display = 'none';
+    });
+  
+    // Cerrar el modal si el usuario hace clic fuera del contenido del modal
+    window.addEventListener('click', function(event) {
+      if (event.target === sizeGuideModal) {
+        sizeGuideModal.style.display = 'none';
+      }
+    });
+  });
+  

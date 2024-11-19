@@ -33,9 +33,25 @@
             </ul>
         </li>
                        <li><a href="#" id="contact-link">Contacto</a></li>
+                       <li><a href="#" id="size-guide-link">Guía de Talles</a>
+        <ul class="dropdown" id="size-guide-dropdown">
+          <li><a href="#" class="guide-item" data-guide="remeras">Guía de Remeras</a></li>
+          <li><a href="#" class="guide-item" data-guide="pantalones">Guía de Joggers</a></li>
+          <li><a href="#" class="guide-item" data-guide="shorts">Guía de Shorts</a></li>
+          <li><a href="#" class="guide-item" data-guide="buzos">Guía de buzos</a></li>
+          <li><a href="#" class="guide-item" data-guide="jeans">Guía de jeans</a></li>
+        </ul>
+      </li>
                     </ul>
                 </nav>
-                
+             <!-- Modal para mostrar la guía de talles -->
+<div id="size-guide-modal" class="size-guide-modal">
+  <div class="size-guide-modal-content">
+    <span class="close-btn" id="close-modal-btn">&times;</span>
+    <h2 id="guide-title"></h2>
+    <img id="guide-image" src="" alt="Guía de Talles">
+  </div>
+</div>
                 <div class="search-cart">
                     <input type="text" id="search-input" placeholder="Buscar..." onkeyup="searchProducts()">
                     <div id="search-results"></div>
@@ -335,22 +351,13 @@
                 </div>
                 <br>
                 <button onclick="addToCartFromModal()">Agregar al Carrito</button>
-                <button onclick="openSizeGuideModal()">Guía de Talles</button>
+                
             </div>
         </div>
     </div>
 </div>
 
 
-<!-- Modal de Guía de Talles -->
-<div id="size-guide-modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeSizeGuideModal()">&times;</span>
-        <div class="modal-inner">
-            <img src="./img/talle.jpeg" alt="Guía de Talles" class="size-guide-image">
-        </div>
-    </div>
-</div>
 
     
      
